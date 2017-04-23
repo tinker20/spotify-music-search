@@ -1,0 +1,247 @@
+/* line 1, ../../scss/_home.scss */
+.main-content {
+  background-color: #383a49;
+}
+
+/* line 6, ../../scss/_home.scss */
+.image-content-with-search-box .image-background {
+  height: 500px;
+  background-color: #bb4469;
+  margin: 0 100px;
+}
+/* line 10, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .icon-header {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+/* line 14, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .icon-header img {
+  height: 100px;
+}
+/* line 18, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .header-powered-content {
+  float: right;
+  color: white;
+  padding-right: 15px;
+  padding-top: 25px;
+}
+/* line 24, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .music-search-icon, .image-content-with-search-box .image-background .music-down-icon {
+  margin: 0;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+/* line 31, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .music-search-icon .hero, .image-content-with-search-box .image-background .music-down-icon .hero {
+  height: 250px;
+}
+/* line 35, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .music-down-icon {
+  top: 55%;
+}
+/* line 38, ../../scss/_home.scss */
+.image-content-with-search-box .image-background .music-down-icon img {
+  height: 120px;
+}
+/* line 43, ../../scss/_home.scss */
+.image-content-with-search-box .search-input-box {
+  text-align: center;
+  height: 60px;
+}
+/* line 46, ../../scss/_home.scss */
+.image-content-with-search-box .search-input-box form {
+  margin-top: 20px;
+}
+/* line 48, ../../scss/_home.scss */
+.image-content-with-search-box .search-input-box form input[type=text] {
+  height: 38px;
+  width: 450px;
+  margin-top: 7px;
+  border-radius: 50px;
+  border: gray 1px solid;
+  outline: none;
+}
+/* line 56, ../../scss/_home.scss */
+.image-content-with-search-box .search-input-box form button {
+  background-color: #d05d84;
+  margin-left: -8.8%;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  padding: 10px 27px;
+  cursor: pointer;
+  font-weight: 100;
+}
+/* line 70, ../../scss/_home.scss */
+.image-content-with-search-box .displayBlock {
+  display: block;
+}
+/* line 73, ../../scss/_home.scss */
+.image-content-with-search-box .search-results {
+  padding: 20px 20%;
+}
+/* line 75, ../../scss/_home.scss */
+.image-content-with-search-box .search-results .each-result {
+  position: relative;
+  float: left;
+  cursor: pointer;
+  margin-right: 30px;
+}
+/* line 80, ../../scss/_home.scss */
+.image-content-with-search-box .search-results .each-result .image-content {
+  height: 150px;
+  width: 150px;
+}
+/* line 84, ../../scss/_home.scss */
+.image-content-with-search-box .search-results .each-result .image-type {
+  position: absolute;
+  bottom: 55px;
+  left: 5px;
+  height: 30px;
+}
+/* line 90, ../../scss/_home.scss */
+.image-content-with-search-box .search-results .each-result .result-name {
+  color: #56565d;
+  font-size: 16px;
+  width: 150px;
+  background-color: #ffffff;
+  margin-top: -4px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 103, ../../scss/_home.scss */
+.image-content-with-search-box .no-results {
+  background-color: #383a49;
+  margin: 21px 20%;
+  text-align: center;
+}
+/* line 107, ../../scss/_home.scss */
+.image-content-with-search-box .no-results img {
+  color: rgba(199, 199, 199, 0.19);
+  height: 60px;
+  width: 60px;
+}
+/* line 112, ../../scss/_home.scss */
+.image-content-with-search-box .no-results p {
+  color: rgba(199, 199, 199, 0.19);
+  font-size: 18px;
+}
+
+/* line 119, ../../scss/_home.scss */
+.details-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* line 130, ../../scss/_home.scss */
+.details-modal .details-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  width: 30%;
+}
+/* line 134, ../../scss/_home.scss */
+.details-modal .details-modal-content .modal-image-background {
+  height: 300px;
+  background-color: #3d404e;
+  position: relative;
+}
+/* line 138, ../../scss/_home.scss */
+.details-modal .details-modal-content .modal-image-background .img {
+  height: 300px;
+  width: 100%;
+}
+/* line 142, ../../scss/_home.scss */
+.details-modal .details-modal-content .modal-image-background .modal-close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+/* line 149, ../../scss/_home.scss */
+.details-modal .details-modal-content .modal-image-background .modal-close:hover, .details-modal .details-modal-content .modal-image-background .modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 156, ../../scss/_home.scss */
+.details-modal .details-modal-content .modal-image-background .name .music-selected-name {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: aliceblue;
+  font-size: x-large;
+}
+/* line 165, ../../scss/_home.scss */
+.details-modal .details-modal-content .albums {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  color: rgba(54, 57, 70, 0.62);
+}
+/* line 171, ../../scss/_home.scss */
+.details-modal .details-modal-content .tracks-in-albums {
+  height: 300px;
+  margin-top: 0;
+  overflow: auto;
+}
+/* line 175, ../../scss/_home.scss */
+.details-modal .details-modal-content .tracks-in-albums .track-list {
+  height: 100px;
+  list-style-type: none;
+}
+/* line 179, ../../scss/_home.scss */
+.details-modal .details-modal-content .tracks-in-albums .track-list .track .track-list-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 280px;
+  display: inline-flex;
+}
+/* line 183, ../../scss/_home.scss */
+.details-modal .details-modal-content .tracks-in-albums .track-list .track .track-list-item .track-img {
+  height: 75px !important;
+  width: 75px !important;
+  margin-right: 15px;
+}
+/* line 188, ../../scss/_home.scss */
+.details-modal .details-modal-content .tracks-in-albums .track-list .track .track-list-item .track-name {
+  width: 120px;
+  font-size: 20px;
+}
+
+/* line 199, ../../scss/_home.scss */
+.show-more {
+  text-align: center;
+}
+/* line 201, ../../scss/_home.scss */
+.show-more button {
+  background-color: #d05d84;
+  margin-left: -8.8%;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  padding: 10px 27px;
+  cursor: pointer;
+  font-weight: 100;
+}

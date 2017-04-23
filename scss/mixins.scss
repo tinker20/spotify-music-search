@@ -1,0 +1,5 @@
+@mixin truncateText($whiteSpace, $textOverflow, $overflow){
+  white-space: $whiteSpace;
+  text-overflow: $textOverflow;
+  overflow: $overflow;
+}

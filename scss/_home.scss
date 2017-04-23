@@ -1,0 +1,213 @@
+.main-content {
+  background-color: #383a49;
+}
+
+.image-content-with-search-box {
+  .image-background {
+    height: 500px;
+    background-color: #bb4469;
+    margin: 0 100px;
+    .icon-header {
+      float: left;
+      padding-left: 20px;
+      padding-top: 20px;
+      img {
+        height: 100px;
+      }
+    }
+    .header-powered-content {
+      float: right;
+      color: white;
+      padding-right: 15px;
+      padding-top: 25px;
+    }
+    .music-search-icon {
+      margin: 0;
+      position: absolute;
+      top: 33%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      .hero {
+        height: 250px;
+      }
+    }
+    .music-down-icon {
+      @extend .music-search-icon;
+      top: 55%;
+      img {
+        height: 120px;
+      }
+    }
+  }
+  .search-input-box {
+    text-align: center;
+    height: 60px;
+    form {
+      margin-top: 20px;
+      input[type=text] {
+        height: 38px;
+        width: 450px;
+        margin-top: 7px;
+        border-radius: 50px;
+        border: gray 1px solid;
+        outline: none;
+      }
+      button {
+        background-color: #d05d84;
+        margin-left: -8.8%;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        padding: 10px 27px;
+        cursor: pointer;
+        font-weight: 100;
+      }
+    }
+  }
+  .displayBlock {
+    display: block;
+  }
+  .search-results {
+    padding: 20px 20%;
+    .each-result {
+      position: relative;
+      float: left;
+      cursor: pointer;
+      margin-right: 30px;
+      .image-content {
+        height: 150px;
+        width: 150px;
+      }
+      .image-type {
+        position: absolute;
+        bottom: 55px;
+        left: 5px;
+        height: 30px;
+      }
+      .result-name {
+        color: #56565d;
+        font-size: 16px;
+        width: 150px;
+        background-color: #ffffff;
+        margin-top: -4px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: center;
+        @include truncateText(nowrap, ellipsis, hidden);
+      }
+    }
+  }
+  .no-results {
+    background-color: #383a49;
+    margin: 21px 20%;
+    text-align: center;
+    img {
+      color: rgba(199, 199, 199, 0.19);
+      height: 60px;
+      width: 60px;
+    }
+    p {
+      color: rgba(199, 199, 199, 0.19);
+      font-size: 18px;
+    }
+  }
+}
+
+.details-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  .details-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    width: 30%;
+    .modal-image-background {
+      height: 300px;
+      background-color: #3d404e;
+      position: relative;
+      .img {
+        height: 300px;
+        width: 100%;
+      }
+      .modal-close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        &:hover, &:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .name {
+        .music-selected-name {
+          position: absolute;
+          bottom: 5px;
+          left: 10px;
+          color: aliceblue;
+          font-size: x-large;
+        }
+      }
+    }
+    .albums {
+      font-size: 20px;
+      margin-bottom: 15px;
+      margin-left: 10px;
+      color: rgba(54, 57, 70, 0.62);
+    }
+    .tracks-in-albums {
+      height: 300px;
+      margin-top: 0;
+      overflow: auto;
+      .track-list {
+        height: 100px;
+        list-style-type: none;
+        .track {
+          .track-list-item {
+            @include truncateText(nowrap, ellipsis, hidden);
+            width: 280px;
+            display: inline-flex;
+            .track-img {
+              height: 75px !important;
+              width: 75px !important;
+              margin-right: 15px;
+            }
+            .track-name {
+              width: 120px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.show-more {
+  text-align: center;
+  button {
+    background-color: #d05d84;
+    margin-left: -8.8%;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    padding: 10px 27px;
+    cursor: pointer;
+    font-weight: 100;
+  }
+}

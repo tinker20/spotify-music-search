@@ -1,0 +1,62 @@
+<div class="image-content-with-search-box">
+    <div class="image-background">
+        <div class="icon-header">
+            <img class="logo" src="assets/images/gl-logo@2x.png">
+        </div>
+        <div class="header-powered-content">
+            <p>Powered by Spotify</p>
+        </div>
+        <div class="music-search-icon">
+            <img class="hero" src="assets/images/hero-img@2x.png">
+        </div>
+        <div class="music-down-icon">
+            <img src="assets/images/Page 1@2x.png">
+        </div>
+    </div>
+    <div class="search-input-box">
+        <form ng-submit="music.searchNow(music.query)">
+            <input placeholder="Search for artist or album title" type="text" id="search" ng-model="music.query" required>
+            <button type="submit">SEARCH</button>
+        </form>
+    </div>
+    <div class="search-results" ng-show="music.showResults">
+        <div class="each-result" ng-repeat="result in music.allResults" ng-click="music.getDetails(result)">
+            <img class="image-content" ng-src="{{result.images[0].url}}">
+            <img class="image-type" ng-if="result.type === 'artist'" src="assets/images/artist-icon@2x.png">
+            <img class="image-type" ng-if="result.type === 'album'" src="assets/images/album-icon@2x.png">
+            <p class="result-name">{{result.name}}</p>
+        </div>
+        <div class="show-more">
+            <button>Show More</button>
+        </div>
+    </div>
+    <div class="no-results" ng-hide="music.showResults">
+        <img src="assets/images/Magnify@2x.png">
+        <p>Search results will appear here.</p>
+    </div>
+</div>
+
+<div class="details-modal">
+    <div class="details-modal-content">
+        <div class="modal-image-background">
+        <span class="modal-close" ng-click="music.closeModal()">&times;</span>
+            <img ng-src="{{music.selected.imageUrl}}" class="img">
+            <div class="name">
+                <p class="music-selected-name">{{music.selected.name}}</p>
+            </div>
+        </div>
+        <p class="albums">Albums</p>
+        <hr>
+        <div class="tracks-in-albums">
+            <ul class="track-list">
+                <li class="track" ng-repeat="tracks in music.tracksInAlbums">
+                    <div class="track-list-item">
+                        <img class="track-img" ng-src="{{tracks.images[0].url}}" ng-if="tracks.images[0].url">
+                        <img class="track-img" src="http://1.bp.blogspot.com/-Zr0pmj1bLnM/Uhh7kROhGYI/AAAAAAAAGkE/W51xFS75-Ec/s1600/no-thumbnail.png" ng-if="!tracks.images[0].url">
+                        <p class="track-name">{{tracks.name}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
