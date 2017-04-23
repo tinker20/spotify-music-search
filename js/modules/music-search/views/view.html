@@ -21,7 +21,8 @@
     </div>
     <div class="search-results" ng-show="music.showResults">
         <div class="each-result" ng-repeat="result in music.allResults" ng-click="music.getDetails(result)">
-            <img class="image-content" ng-src="{{result.images[0].url}}">
+            <img class="image-content" ng-if="!result.images[0].url" ng-src="{{music.noImage.url}}">
+            <img class="image-content" ng-if="result.images[0].url" ng-src="{{result.images[0].url}}">
             <img class="image-type" ng-if="result.type === 'artist'" src="assets/images/artist-icon@2x.png">
             <img class="image-type" ng-if="result.type === 'album'" src="assets/images/album-icon@2x.png">
             <p class="result-name">{{result.name}}</p>
@@ -40,12 +41,12 @@
     <div class="details-modal-content">
         <div class="modal-image-background">
         <span class="modal-close" ng-click="music.closeModal()">&times;</span>
-            <img ng-src="{{music.selected.imageUrl}}" class="img">
+            <img ng-src="{{music.selected.images[0].url}}" class="img">
             <div class="name">
                 <p class="music-selected-name">{{music.selected.name}}</p>
             </div>
         </div>
-        <p class="albums">Albums</p>
+        <p class="albums">{{music.selected.type}}</p>
         <hr>
         <div class="tracks-in-albums">
             <ul class="track-list">

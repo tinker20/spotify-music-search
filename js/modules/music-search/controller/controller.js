@@ -7,7 +7,12 @@
             var self = this;
             self.showResults = false;
 
+            self.noImage = {
+                url: 'http://1.bp.blogspot.com/-Zr0pmj1bLnM/Uhh7kROhGYI/AAAAAAAAGkE/W51xFS75-Ec/s1600/no-thumbnail.png'
+            };
+
             self.searchNow = function (data) {
+                self.showSpinner = true;
                 self.allResults = [];
                 self.promise = $q.all([
                     Spotify.search(data, 'artist'),
@@ -15,6 +20,7 @@
                     .then(function (response) {
                         self.allResults = response[0].data.artists.items.concat(response[1].data.albums.items);
                         self.showResults = true;
+                        self.showSpinner = false;
                     })
                     .catch(function (err) {
                         console.log(err);
@@ -22,23 +28,10 @@
             };
 
             self.getDetails = function (data) {
-                if(data.type === 'artist'){
-                    console.log(data);
-                    if(data.images[0].url) {
-                        self.selected = {
-                            name: data.name,
-                            imageUrl: data.images[0].url
-                        };
-                    }
-                    else {
-                        self.selected = {
-                            name: data.name,
-                            imageUrl: 'http://1.bp.blogspot.com/-Zr0pmj1bLnM/Uhh7kROhGYI/AAAAAAAAGkE/W51xFS75-Ec/s1600/no-thumbnail.png'
-                        };
-                    }
+                self.selected = data;
+                if (data.type === 'artist') {
                     Spotify.getArtistAlbums(data.id)
                         .then(function (response) {
-                            console.log(response);
                             self.tracksInAlbums = response.data.items;
                             angular.element('.details-modal').css('display', 'block');
                         })
@@ -51,6 +44,7 @@
                         .then(function (response) {
                             self.tracksInAlbums = response.data.items;
                             angular.element('.details-modal').css('display', 'block');
+                            console.log(self.tracksInAlbums);
                         })
                         .catch(function (err) {
                             console.log(err);
@@ -60,6 +54,7 @@
 
             self.closeModal = function () {
                 self.tracksInAlbums = [];
+                self.selected = {};
                 angular.element('.details-modal').css('display', 'none');
             };
         }
