@@ -221,14 +221,15 @@
 /* line 185, ../../js/modules/music-search/scss/_musicSearch.scss */
 .details-modal .details-modal-content .tracks-in-albums .track-list .track .track-list-item .track-name {
   width: 120px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 900;
 }
 
-/* line 196, ../../js/modules/music-search/scss/_musicSearch.scss */
+/* line 197, ../../js/modules/music-search/scss/_musicSearch.scss */
 .show-more {
   text-align: center;
 }
-/* line 198, ../../js/modules/music-search/scss/_musicSearch.scss */
+/* line 199, ../../js/modules/music-search/scss/_musicSearch.scss */
 .show-more button {
   background-color: #d05d84;
   margin-left: -8.8%;

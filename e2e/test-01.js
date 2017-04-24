@@ -20,7 +20,10 @@ describe('first-test', function() {
             })
             .then(function (count) {
                 console.log('No of results returned', count);
-
+                return expect(count).toEqual(28);
+            })
+            .then(function () {
+                console.log('count evaluated to be 28');
             })
             .catch(function () {
                 console.log(err);
